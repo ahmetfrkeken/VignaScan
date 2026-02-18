@@ -1,0 +1,7 @@
+package com.ekenahmetfaruk.vigna_scan.ui.camera
+
+import androidx.lifecycle.ViewModel
+
+class CameraViewModel : ViewModel() {
+    // TODO: Implement the ViewModel
+}
