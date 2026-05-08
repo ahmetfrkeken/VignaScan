@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.hilt)
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -56,11 +57,6 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.android)
 
-    implementation(libs.androidx.room.ktx)
-    implementation(libs.androidx.room.paging)
-    implementation(libs.androidx.room.runtime)
-    kapt(libs.androidx.room.compiler)
-
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
 
@@ -70,9 +66,6 @@ dependencies {
     debugImplementation(libs.chucker.library)
     releaseImplementation(libs.chucker.library.no.op)
 
-    implementation(libs.pinView)
-    implementation(libs.country.code.picker)
-    implementation(libs.microsoft.signalr)
     implementation(libs.glide)
 
     implementation(libs.material)
@@ -81,4 +74,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    // PyTorch Mobile
+    implementation(libs.bundles.pytorch)
+
+    // CameraX
+    implementation(libs.bundles.camerax)
 }

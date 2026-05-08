@@ -1,18 +1,17 @@
 package com.ekenahmetfaruk.vigna_scan
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.ekenahmetfaruk.vigna_scan.ui.camera.CameraFragment
+import androidx.appcompat.app.AppCompatActivity
+import com.ekenahmetfaruk.vigna_scan.databinding.ActivityCameraBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CameraActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityCameraBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_camera)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, CameraFragment.newInstance())
-                .commitNow()
-        }
+        binding = ActivityCameraBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }

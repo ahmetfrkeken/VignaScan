@@ -7,4 +7,38 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="primary">#1B5E20</color>
+    <color name="primary_light">#4CAF50</color>
+    <color name="primary_dark">#0A3D0A</color>
+
+    <!-- Background Colors -->
+    <color name="background">#0A0A0A</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="surface_variant">#2C2C2C</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_hint">#666666</color>
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="success_container">#1B3A1C</color>
+    <color name="error">#EF5350</color>
+    <color name="error_container">#3A1B1B</color>
+    <color name="warning">#FFA726</color>
+
+    <!-- Overlay -->
+    <color name="overlay_dark">#99000000</color>
+    <color name="overlay_medium">#66000000</color>
+    <color name="camera_overlay">#80000000</color>
+
+    <!-- Card -->
+    <color name="card_background">#1E1E1E</color>
+    <color name="card_stroke">#2C2C2C</color>
+
+    <!-- Divider -->
+    <color name="divider">#2C2C2C</color>
 </resources>

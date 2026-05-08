@@ -3,29 +3,24 @@ agp = "8.11.2"
 kotlin = "2.0.21"
 hilt = "2.52"
 mvvm = "2.8.7"
-room = "2.6.1"
 navigation = "2.8.5"
-signalR = "8.0.11"
 glide = "4.16.0"
 
 retrofit = "3.0.0"
 chucker = "3.5.2"
 
-pinView = "1.4.4"
-ccp = "2.7.3"
-
 appcompat = "1.7.1"
 constraintlayout = "2.2.1"
 material = "1.12.0"
-#test için
+
 junit = "4.13.2"
 junitVersion = "1.3.0"
 espressoCore = "3.7.0"
 
-#todo: ileride eklenebilir.
-ksp = "2.6.1"
 activity = "1.11.0"
-media3CommonKtx = "1.8.0"
+
+pytorch = "2.1.0"
+camerax = "1.3.0"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -39,11 +34,6 @@ hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hil
 androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "mvvm" }
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "mvvm" }
 
-androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
-androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
-androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
-androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
-
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 androidx-navigation-safe-args = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation" }
@@ -54,9 +44,6 @@ retrofit-gson-converter = { module = "com.squareup.retrofit2:converter-gson", ve
 chucker-library = { module = "com.github.chuckerteam.chucker:library", version.ref = "chucker"}
 chucker-library-no-op = { module = "com.github.chuckerteam.chucker:library-no-op", version.ref = "chucker"}
 
-pinView = { module = "io.github.chaosleung:pinview", version.ref = "pinView"}
-country-code-picker = { group = "com.hbb20", name = "ccp", version.ref = "ccp" }
-microsoft-signalr = { module = "com.microsoft.signalr:signalr", version.ref = "signalR"}
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide"}
 
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
@@ -67,3 +54,17 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+
+# PyTorch Dependencies
+pytorch-android-lite = { group = "org.pytorch", name = "pytorch_android_lite", version.ref = "pytorch" }
+pytorch-torchvision-lite = { group = "org.pytorch", name = "pytorch_android_torchvision_lite", version.ref = "pytorch" }
+
+# CameraX Dependencies
+androidx-camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "camerax" }
+androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax" }
+androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
+androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
+
+[bundles]
+pytorch = ["pytorch-android-lite", "pytorch-torchvision-lite"]
+camerax = ["androidx-camera-core", "androidx-camera-camera2", "androidx-camera-lifecycle", "androidx-camera-view"]
